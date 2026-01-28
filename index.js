@@ -539,14 +539,124 @@ multi-line comment
 
 
 // count how many numbers are >10
-const nums = [5, 12, 17, 2];
+// const nums = [5, 12, 17, 2];
 
-let count = 0;
+// let count = 0;
 
-for(let i=0; i<nums.length;i++){
-    if(nums[i]>10){
-        count++;
+// for(let i=0; i<nums.length;i++){
+//     if(nums[i]>10){
+//         count++;
+//     }
+// }
+
+// console.log(count);
+
+
+// // DOM - Document Object Model
+
+// // getElementById()
+
+// const heading = document.getElementById("title");
+// console.log(heading);
+
+// // getElementsByClassName() - returns HTML Collection : array-like
+// // map, filter, reduce : cannot be applied on HTML COllection
+// // length - can be applied
+
+// const items = document.getElementsByClassName("item"); 
+// console.log(items)
+// console.log(items.length);
+
+// // querySelector - 1st instance
+
+// const btn = document.querySelector('button')
+// console.log(btn);
+
+
+
+// const btns = document.querySelectorAll('button')
+// console.log(btns);
+// console.log(btns[0]);
+// console.log(btns[1]);
+
+// const byClass = document.querySelectorAll(".item");
+// console.log(byClass);
+
+// const byIdVar = document.querySelectorAll("#title");
+// console.log(byIdVar);
+
+
+
+
+// const title = document.querySelector("#title");
+// // console.log(title);
+// title.style.color = "red";
+// title.style.backgroundColor = "black";
+// title.style.padding = "20px";
+// title.style.fontSize = "40px";
+
+// // changing content
+
+// // innerText
+// title.innerText = "New Title";
+
+// // innerHTML
+// title.innerHTML = "<li>list item</li><li>list item2</li>"
+
+// -----------------------------
+// Create & Remove
+
+// const newH1 = document.createElement("h1");
+// newH1.innerText = "I am new!"
+// console.log(newH1);
+
+// // append to parent
+// // document.body.appendChild(newH1)
+
+
+// const box = document.querySelector('#box');
+// box.appendChild(newH1)
+
+// // box.removeChild(newH1);
+// // box.remove()
+
+
+// const box = document.querySelector('#box');
+// box.classList.add("card")
+// // box.classList.remove("card")
+// console.log(box.classList.contains("card"));
+
+
+
+
+// Event Listeners - let JS respond to user's actions
+// click
+
+const div = document.querySelector("div")
+div.classList.add("card")
+
+
+const btn = document.querySelector("button");
+
+// btn.addEventListener("click", ()=>{
+//     console.log("Clicked on this button of btn");
+//     div.classList.add("card")
+// })
+
+
+const toggleMode = ()=>{
+    if(btn.classList.contains("btn-dark")){
+        btn.classList.remove("btn-dark")
+        document.body.style.backgroundColor = "white";
+        document.body.style.color = "black"
+        btn.innerText = "Dark Mode";
+    }else{
+        btn.classList.add("btn-dark")
+        document.body.style.backgroundColor = "black";
+        document.body.style.color = "white"
+        btn.innerText = "Light Mode";
     }
 }
 
-console.log(count);
+
+btn.addEventListener("click",toggleMode)
