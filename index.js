@@ -632,31 +632,109 @@ multi-line comment
 // Event Listeners - let JS respond to user's actions
 // click
 
-const div = document.querySelector("div")
-div.classList.add("card")
+// const div = document.querySelector("div")
+// div.classList.add("card")
 
 
-const btn = document.querySelector("button");
+// const btn = document.querySelector("button");
 
-// btn.addEventListener("click", ()=>{
-//     console.log("Clicked on this button of btn");
-//     div.classList.add("card")
+// // btn.addEventListener("click", ()=>{
+// //     console.log("Clicked on this button of btn");
+// //     div.classList.add("card")
+// // })
+
+
+// const toggleMode = ()=>{
+//     if(btn.classList.contains("btn-dark")){
+//         btn.classList.remove("btn-dark")
+//         document.body.style.backgroundColor = "white";
+//         document.body.style.color = "black"
+//         btn.innerText = "Dark Mode";
+//     }else{
+//         btn.classList.add("btn-dark")
+//         document.body.style.backgroundColor = "black";
+//         document.body.style.color = "white"
+//         btn.innerText = "Light Mode";
+//     }
+// }
+
+
+// btn.addEventListener("click",toggleMode)
+
+// // Array Methods
+// // map - transform each element
+
+// const numbers = [1,2,3,4];
+
+// const doubled = numbers.map((item)=>{
+//     if(item>2) return item*2;
+// })
+
+// console.log(doubled);
+// console.log(numbers);
+
+
+// // Filter - keep only items that match the condition
+
+// const nums = [5, 10, 15, 20];
+
+// const filtered = nums.filter((n)=>{
+//     return n>10;
+// })
+
+// console.log(filtered);
+
+// // 2 types of funs - callback - which you pass to another fun, higher order fn - in which another fun is passed
+
+// // fun1
+// // fun2
+
+
+// function greet(){
+//     return "Hello World"
+// }
+
+// function morning(func){
+//     console.log(`${func()} to the workshop!`);
+// }
+
+// morning(greet);
+
+// // greet - callback func
+// // morning - higher order fun
+
+
+// const form = document.getElementById("loginForm")
+// const msg = document.getElementById("msg")
+
+// form.addEventListener("submit", (event)=>{
+//     event.preventDefault();
+
+//     const username = document.getElementById("username").value;
+//     const password = document.getElementById("password").value;
+    
+//     // console.log(username, password);
+    
+    
+//     if(username && password && password.length>6){
+//         msg.innerText = `Username: ${username}, Password : ${password}`
+//     }else{
+//         msg.innerText = `Value(s) missing!`
+//     }
 // })
 
 
-const toggleMode = ()=>{
-    if(btn.classList.contains("btn-dark")){
-        btn.classList.remove("btn-dark")
-        document.body.style.backgroundColor = "white";
-        document.body.style.color = "black"
-        btn.innerText = "Dark Mode";
-    }else{
-        btn.classList.add("btn-dark")
-        document.body.style.backgroundColor = "black";
-        document.body.style.color = "white"
-        btn.innerText = "Light Mode";
-    }
-}
+// let number1 = 7;
+// let number2 = number1;
+
+// number2 = 8;
+
+// console.log(number1, number2);
 
 
-btn.addEventListener("click",toggleMode)
+let person1 = {name : "Asha", age : 29};
+let person2 = {...person1};
+
+person2.age = 40;
+
+console.log(person1, person2);
